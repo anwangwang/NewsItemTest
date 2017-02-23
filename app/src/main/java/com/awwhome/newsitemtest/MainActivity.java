@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
+import com.awwhome.newsitemtest.adapter.NewsAdapter;
 import com.awwhome.newsitemtest.entity.NewsBean;
 import com.awwhome.newsitemtest.util.NewsUtil;
 
@@ -27,34 +28,11 @@ public class MainActivity extends AppCompatActivity {
         // 1.找到控件
         lv_news_item = (ListView) findViewById(R.id.lv_news_item);
 
+        NewsAdapter adapter = new NewsAdapter(NewsUtil.getAllNews(mContext));
+
         // 2.设置适配器
-        lv_news_item.setAdapter(new NewsAdapter());
+        lv_news_item.setAdapter(adapter);
     }
 
-    class NewsAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            return 0;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            List<NewsBean> news = NewsUtil.getAllNews(mContext);
-
-            return null;
-        }
-    }
 
 }

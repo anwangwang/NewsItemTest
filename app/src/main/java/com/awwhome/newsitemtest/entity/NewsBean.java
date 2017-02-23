@@ -9,8 +9,8 @@ import android.graphics.drawable.Drawable;
  */
 public class NewsBean {
 
-    public String mTitle;
-    public String mDesc;
-    public Drawable mIcon;
-    public String mNewsUrl;
+    public String mTitle; // 标题
+    public String mDesc; // 描述
+    public Drawable mIcon; // 头像
+    public String mNewsUrl; // 详情URL
 }
